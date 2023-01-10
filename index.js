@@ -9,4 +9,5 @@ const server=http.createServer((req,res)=>{
 
     res.end(currenttime)
 })
-server.listen(8000,()=>{console.log(`Server listening to 8000`)})
+const PORT = process.env.PORT || 8000;
+server.listen(PORT,()=>{console.log(`Server listening to ${PORT}`)})
